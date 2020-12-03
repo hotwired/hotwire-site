@@ -1,0 +1,31 @@
+/* ----------------------------------------------------------------------------
+it's a button... that you click
+---------------------------------------------------------------------------- */
+
+.button {
+  transition: font-weight 0.1s ease, clip-path 0.2s ease;
+  display: inline-block;
+  padding: 1em 1.5em;
+  color: var(--color-text);
+  font-family: var(--font-main);
+  text-decoration: none;
+  text-align: center;
+  line-height: normal;
+  -webkit-appearance: none;
+  background-color: var(--color-link);
+  border: 0;
+  box-shadow: none;
+  clip-path: polygon(5% 10%, 46% 1%, 46% 10%, 100% 0, 95% 90%, 31% 100%, 31% 90%, 0% 100%);
+
+  &:visited {
+    color: var(--color-text);
+  }
+
+  &:hover {
+    color: var(--color-text);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 900;
+    clip-path: polygon(5% 10%, 66% 1%, 66% 10%, 100% 0, 95% 90%, 51% 100%, 51% 90%, 0% 100%);
+  }
+}

@@ -7,15 +7,19 @@ animate: make any element animate now, later, or when it scrolls into view
     animation: fade-in 0.5s ease-out forwards;
   }
 
+  &.--fade-in-pop {
+    animation: fade-in-pop 0.15s ease forwards;
+  }
+
   @nest .js &[data-aos] {
     opacity: 0;
   }
 
-  &.--delay-s { animation-delay: 0.15s; }
-  &.--delay-m { animation-delay: 0.3s; }
-  &.--delay-l { animation-delay: 0.45s; }
-  &.--delay-xl { animation-delay: 0.6s; }
-  &.--delay-xxl { animation-delay: 0.75s; }
+  &.--delay-s { animation-delay: 0.25s; }
+  &.--delay-m { animation-delay: 0.5s; }
+  &.--delay-l { animation-delay: 0.75s; }
+  &.--delay-xl { animation-delay: 1s; }
+  &.--delay-xxl { animation-delay: 1.5s; }
 
   &.--duration-s { animation-duration: 0.25s; }
   &.--duration-m { animation-duration: 0.5s; }
@@ -25,11 +29,43 @@ animate: make any element animate now, later, or when it scrolls into view
 }
 
 @keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-in-pop {
   0% {
+    transform: scale(0.8);
     opacity: 0;
   }
 
-  100% {
+  85% {
+    transform: scale(1.03);
     opacity: 1;
   }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes color-cycle {
+  0% { background-color: var(--color-accent); }
+  33% { background-color: var(--color-positive); }
+  66% { background-color: var(--color-accent); }
+  100% { background-color: var(--color-negative); }
+}
+
+@keyframes color-cycle-fill {
+  0% { fill: var(--color-accent); }
+  33% { fill: var(--color-positive); }
+  66% { fill: var(--color-accent); }
+  100% { fill: var(--color-negative); }
+}
+
+@keyframes spark {
+  0% { opacity: 0; }
+  75% { opacity: 0; }
+  100% { opacity: 1; }
 }

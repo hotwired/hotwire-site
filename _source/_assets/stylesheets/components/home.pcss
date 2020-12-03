@@ -1,0 +1,74 @@
+/* ----------------------------------------------------------------------------
+homepage components
+---------------------------------------------------------------------------- */
+
+.home-block {
+  position: relative;
+  text-align: center;
+  background-color: var(--color-neutral);
+
+  &.--leader {
+    margin-top: 13em;
+
+    &::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      margin: -13em 0 0 0;
+      background: url('/assets/wiring/leads.svg') center top / 15em auto no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  &.--connector {
+    margin-top: 5em;
+
+    &::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: -10em;
+      left: 0;
+      right: 0;
+      height: 10em;
+      z-index: -2;
+      margin: 5em 0 0 0;
+      pointer-events: none;
+      background: url('/assets/wiring/connector.svg') center bottom / 10em auto no-repeat;
+    }
+  }
+
+  &.--connector-2::after {
+    background: url('/assets/wiring/connector-2.svg') center bottom / 14em auto no-repeat;
+  }
+
+  &.--connector-3::after {
+    background: url('/assets/wiring/connector-3.svg') center bottom / 12em auto no-repeat;
+  }
+}
+
+.home-block__spark {
+  position: absolute;
+  width: 18em;
+  top: -21.5em;
+  left: calc(50% - 9em);
+  z-index: -2;
+
+  & .spark__outer {
+    fill: var(--color-sheet);
+  }
+
+  & .spark__inner {
+    fill: var(--color-accent);
+    animation: color-cycle-fill 0.3s step-start infinite;
+
+    @media (prefers-reduced-motion) {
+      animation: none;
+    }
+  }
+}

@@ -29,8 +29,9 @@ body {
   padding: 0;
   font-family: var(--font-main);
   font-size: var(--type-base);
+  font-variation-settings: "wdth" 180;
   color: var(--color-text);
-  background-color: var(--color-sheet);
+  background-color: var(--color-neutral);
 }
 
 h1,
@@ -52,10 +53,9 @@ h1 {
 }
 
 h2 {
-  margin: var(--space-xl) 0 0.25em 0;
-  font-size: var(--type-xl);
+  margin: var(--space-l) 0 var(--space-s) 0;
+  font-size: var(--type-xxl);
   font-weight: 900;
-  text-transform: uppercase;
 }
 
 h3 {
@@ -77,9 +77,9 @@ ul,
 ol,
 dl {
   margin: var(--space-m) 0;
-  font-size: var(--type-s);
+  font-size: var(--type-m);
   line-height: var(--leading-l);
-  font-weight: 350;
+  font-weight: 500;
 }
 
 code {
@@ -151,10 +151,15 @@ a,
 a:visited {
   color: var(--color-text);
   text-decoration-thickness: 0.1em;
+  text-decoration-width: 0.1rem;
+  transition: all 0.2s ease;
+  transition-property: text-decoration-color, text-decoration-thickness, text-decoration-width;
 }
 
 a:hover {
-  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 0.2em;
+  text-decoration-width: 0.2em;
 }
 
 img,
