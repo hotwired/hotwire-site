@@ -32,19 +32,20 @@ homepage components
       content: " ";
       display: block;
       position: absolute;
-      top: -10em;
+      top: -10.5em;
       left: 0;
       right: 0;
-      height: 10em;
+      height: 10.25em;
       z-index: -2;
       margin: 5em 0 0 0;
       pointer-events: none;
-      background: url('/assets/wiring/connector.svg') center bottom -1em / 8em auto no-repeat;
+      background: url('/assets/wiring/connector.svg') center bottom -0.5em / 8em auto no-repeat;
     }
   }
 
   &.--connector-2::after {
-    background: url('/assets/wiring/connector-2.svg') center bottom / 14em auto no-repeat;
+    top: -10em;
+    background: url('/assets/wiring/connector-2.svg') center bottom 1em / 14em auto no-repeat;
   }
 
   &.--connector-3::after {
@@ -71,4 +72,9 @@ homepage components
       animation: none;
     }
   }
+}
+
+.home-block__logo {
+  height: 0.875em;
+  width: auto;
 }
