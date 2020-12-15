@@ -67,7 +67,11 @@ const imgPath = [
 function buildImg() {
   return src(imgPath)
     .pipe(changed(output))
-    .pipe(imagemin())
+    .pipe(imagemin([
+      imagemin.gifsicle(),
+      imagemin.mozjpeg(),
+      imagemin.optipng(),
+    ]))
     .pipe(dest(output)
   );
 }
