@@ -4,8 +4,8 @@ This repository backs the website living at https://hotwire.dev.
 
 To work on it locally:
 
-1. `bundle`
-1. `bundle exec jekyll serve`
+1. `yarn install`
+1. `yarn serve`
 
 
 ## Copyright

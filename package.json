@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "the wire... it's hot",
-  "dependencies": {},
+  "dependencies": {
+    "plyr": "^3.6.3"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "cssnano": "^4.1.10",
