@@ -136,12 +136,13 @@ img,
 embed,
 object,
 video {
+  display: block;
   max-width: 100%;
   height: auto;
-}
 
-video:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 hr {
