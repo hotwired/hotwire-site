@@ -30,3 +30,8 @@
   [headers.values]
     Cache-Control = "public, max-age=365000000, immutable"
 
+[[redirects]]
+  from = "/*"
+  to = "https://hotwired.dev/:splat"
+  status = 301
+  force = true # COMMENT: ensure that we always redirect
