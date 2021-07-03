@@ -1,6 +1,6 @@
 # The Hotwire website
 
-This repository backs the website living at https://hotwire.dev.
+This repository backs the website living at https://hotwired.dev.
 
 To work on it locally:
 
