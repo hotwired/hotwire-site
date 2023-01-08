@@ -1,19 +1,46 @@
-/* ----------------------------------------------------------------------------
-global site footer
----------------------------------------------------------------------------- */
-
-.footer-logos {
-  display: flex;
-  justify-content: center;
+.footer {
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  text-align: center;
 }
 
-.footer-logos__link {
-  text-decoration: none;
+.footer__headline {
+  font-size: 75%;
+  margin: 0 0 0.5em 0;
+}
 
-  & img {
-    height: 1.5em;
-    width: auto;
-    margin: 0 0.25em;
+.footer__links {
+  align-items: center;
+  display: flex;
+  gap: 0.3em;
+  justify-content: center;
+  margin: 0;
+
+  & li {
+    display: flex;
+    margin: 0;
+
+    & a {
+      display: flex;
+
+      & img {
+        height: 1.4em;
+        width: auto;
+      }
+    }
+
+    & span {
+      display: flex;
+      font-size: 65%;
+      font-style: italic;
+      margin-top: 0.3em;
+    }
   }
+}
+
+.footer__copyright {
+  font-size: 75%;
+  margin: 2em 0 3em 0;
 }
