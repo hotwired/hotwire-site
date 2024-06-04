@@ -7,6 +7,39 @@ global site header
   text-align: center;
 }
 
+.header__spark {
+  width: 18em;
+  margin: 3em auto 0;
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: -3em;
+    left: 0;
+    right: 0;
+    margin: 0 0 0 0;
+    background: url('/assets/wiring/leads.svg') center 6em / 15em auto no-repeat;
+    pointer-events: none;
+    transform: rotate(180deg);
+  }
+
+  & .spark__outer {
+    fill: var(--color-sheet);
+  }
+
+  & .spark__inner {
+    fill: var(--color-accent);
+    animation: color-cycle-fill 0.3s step-start infinite;
+
+    @media (prefers-reduced-motion) {
+      animation: none;
+    }
+  }
+}
+
 .header__nav {
   display: flex;
   flex-direction: column;
@@ -15,8 +48,8 @@ global site header
   width: 100%;
   position: relative;
   z-index: 20000;
-  margin: 0;
-  padding: 4em 2em;
+  margin: -4.5em 0 0;
+  padding: 0 2em;
 }
 
 .header__logo {
