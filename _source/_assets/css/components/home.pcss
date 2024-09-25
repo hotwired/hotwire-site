@@ -3,79 +3,42 @@ homepage components
 ---------------------------------------------------------------------------- */
 
 .home-block {
-  position: relative;
   text-align: center;
-  background-color: var(--color-neutral);
 
-  &.--leader {
-    margin-top: 13em;
+  &.--spark::before {
+    content: '';
+    display: block;
+    width: 12em;
+    height: 12em;
+    position: absolute;
+    z-index: -1;
+    left: calc(50% - 6em);
+    top: 1.5em;
+    background: url('/assets/wiring/spark.svg') center / contain no-repeat;
+  }
 
+  &.--spark:nth-child(2) {
     &::before {
-      content: " ";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-      margin: -13em 0 0 0;
-      background: url('/assets/wiring/leads.svg') center top / 15em auto no-repeat;
-      pointer-events: none;
+      transform: rotate(-40deg);
     }
   }
 
-  &.--connector {
-    margin-top: 5em;
-
-    &::after {
-      content: " ";
-      display: block;
-      position: absolute;
-      top: -10.5em;
-      left: 0;
-      right: 0;
-      height: 10.25em;
-      z-index: -2;
-      margin: 5em 0 0 0;
-      pointer-events: none;
-      background: url('/assets/wiring/connector.svg') center bottom -0.5em / 8em auto no-repeat;
+  &.--spark:nth-child(3) {
+    &::before {
+      transform: rotate(60deg);
     }
   }
 
-  &.--connector-2::after {
-    top: -10em;
-    background: url('/assets/wiring/connector-2.svg') center bottom 1em / 14em auto no-repeat;
-  }
-
-  &.--connector-3::after {
-    background: url('/assets/wiring/connector-3.svg') center bottom / 12em auto no-repeat;
-  }
-}
-
-.home-block__spark {
-  position: absolute;
-  width: 18em;
-  top: -21.5em;
-  left: calc(50% - 9em);
-  z-index: -2;
-
-  & .spark__outer {
-    fill: var(--color-sheet);
-  }
-
-  & .spark__inner {
-    fill: var(--color-accent);
-    animation: color-cycle-fill 0.3s step-start infinite;
-
-    @media (prefers-reduced-motion) {
-      animation: none;
+  &.--spark:nth-child(4) {
+    &::before {
+      transform: rotate(180deg);
     }
   }
 }
 
 .home-block__logo {
   display: inline-block;
-  height: 0.875em;
+  height: 1.5em;
   width: auto;
+  position: relative;
 }
