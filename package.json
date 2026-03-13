@@ -4,7 +4,7 @@
   "private": true,
   "description": "the wire... it's hot",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^1.0.2",
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.1",
     "eslint": "^7.15.0",
